@@ -1,48 +1,37 @@
 
+
 public class PokemonGame {
     public static void main(String[] args) {
-//        Pokemon p0 = new Pokemon();
-//        p0.attack();
-//        p0.evolve();
+        Pokemon squirtle = new Pokemon("꼬부기", 1);
+        Pokemon pikachu = new Pokemon("피카츄");
+        Pokemon charizard = new Pokemon();
 
-        Squirtle s1 = new Squirtle();
-        Pikachu p1 = new Pikachu();
-        Pokemon c1 = new Charizard();  // upcast
+        System.out.println(pikachu.getName()
+                + "의 체력은 " + pikachu.getHp()
+                + "이고 레벨은 " + pikachu.getLevel()
+                + "입니다");
 
-        // anonymous object as parameter
-        s1.setFlyable(new NoFly());
-        p1.setFlyable(new NoFly());
-        c1.setFlyable(new Wings(){
-            @Override
-            public void fly() {
-                System.out.println("강철 날개로 날아갑니다!");
-            }
-        });
-        //c1.setFlyable(new Wings());  // Flyable 인터페이스의 default method를 사용
+        squirtle.evolve(squirtle);
+        System.out.println(squirtle.getName());
+        squirtle.evolve(squirtle);
 
-        p1.performFly();
-        c1.performFly();
-        s1.performFly();
+//        pikachu.name = "피카츄";
+//        charizard.name = "리자몽";
 
-        JetPack jetPack = new JetPack();
-        p1.setFlyable(jetPack);  // NoFly 객체 -> JetPack 객체로
-        p1.performFly();
+        charizard.setName("리자몽");
 
-        Balloon balloon = new Balloon();
-        s1.setFlyable(balloon);
-        s1.performFly();
+        pikachu.setLevel(23);
+        pikachu.setHp(100);
 
-//        c1.attack();
-//        c1.evolve();
-//        //c1.type();  // 부모 클래스의 변수로는 자식 클래스의 전용 메서드를 볼 수 없다.
-//        // 리자몽 객체이지만 참조하는 변수가 포켓몬 추상클래스의 c1 변수로 자식 클래스 전용 메서드는 사용 불가
-//
-//        Charizard c2 = (Charizard)c1;  // downcast
-//        c2.type();
-//        c2.evolve();
-//
-//        //s1.evolve();
-//        p1.attack();
-//        s1.attack();
+        charizard.setLevel(36);
+        //charizard.setHp(800);
+
+        System.out.println(charizard.getName() + "의 체력은 " + charizard.getHp() + "이고 레벨은 " + charizard.getLevel() + "입니다");
+        charizard.evolve(charizard);
+        pikachu.evolve(pikachu);
+        pikachu.evolve(pikachu);
+        pikachu.setName("라이츄");
+        System.out.println(pikachu.getName());
+        pikachu.evolve(pikachu);
     }
 }
