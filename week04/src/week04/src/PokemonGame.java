@@ -32,7 +32,8 @@ public class PokemonGame {
         System.out.println("포켓몬을 고르세요.\n 1)피카츄  2)꼬부기   3)리자몽");
         int pokemonpick = scanner.nextInt();
         if(pokemonpick == 1) {
-             player = new Pikachu(new NoFly());
+        //앞에 Pikachu를 적으면 안된다. 위에 Pokemon player 추상클래스로 다 계승받았다.
+            player = new Pikachu(new NoFly());
         }else if(pokemonpick == 2){
              player = new Squirtle(new NoFly());
         }else if(pokemonpick == 3){
