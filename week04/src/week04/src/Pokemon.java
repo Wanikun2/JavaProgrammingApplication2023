@@ -25,6 +25,7 @@ public abstract class Pokemon {
     }
 
     public Pokemon() {
+        pokemonCount++;
     }
 
     public Pokemon(int level, int hp, String name) {
@@ -52,6 +53,12 @@ public abstract class Pokemon {
     }
 
     public abstract void attack();
+
+    public void attack(Pokemon targerPokemon){
+        System.out.println(this.name +"이(가) " + targerPokemon.name + "에게 공격 시전!");
+
+
+    }
     public void evolve(){  // 매개변수 제거
         if(this instanceof Pikachu){
             System.out.println("삐까삐까~");
