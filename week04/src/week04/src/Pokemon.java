@@ -25,8 +25,6 @@ public abstract class Pokemon {
     }
 
     public Pokemon() {
-        System.out.println("부모 클래스의 기본 생성자");
-        pokemonCount++;
     }
 
     public Pokemon(int level, int hp, String name) {
