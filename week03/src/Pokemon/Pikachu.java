@@ -1,5 +1,4 @@
 
-
 public class Pikachu extends Pokemon{
     public Pikachu() {
         System.out.println("자식 클래스(피카츄)의 기본 생성자");
@@ -19,7 +18,4 @@ public class Pikachu extends Pokemon{
 //        return 7;
 //    }
 
-    public void type(){
-        System.out.println(this.name +  " 전기 속성!");
-    }
 }
