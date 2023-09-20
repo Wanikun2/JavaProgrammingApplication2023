@@ -1,4 +1,3 @@
-package version04;
 
 public class ReadHeadDuck extends Duck {
     public ReadHeadDuck() {

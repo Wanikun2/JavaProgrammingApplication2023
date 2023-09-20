@@ -1,4 +1,4 @@
-package version04;
+
 
 public abstract class Duck {
     String name;

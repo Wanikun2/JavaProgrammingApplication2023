@@ -1,4 +1,3 @@
-package version04;
 
 public class DuckSimulator {
     public static void main(String[] args) {

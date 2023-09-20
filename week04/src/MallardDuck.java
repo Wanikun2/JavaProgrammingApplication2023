@@ -1,4 +1,4 @@
-package version04;
+
 
 public class MallardDuck extends Duck {
     public MallardDuck() {

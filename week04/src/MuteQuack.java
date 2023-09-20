@@ -1,4 +1,4 @@
-package version04;
+
 
 public class MuteQuack implements QuackBehavior {
     @Override
