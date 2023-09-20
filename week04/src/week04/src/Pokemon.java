@@ -1,4 +1,4 @@
-package version15;
+package week04.src;
 
 //public final class Pokemon {
 public abstract class Pokemon {
