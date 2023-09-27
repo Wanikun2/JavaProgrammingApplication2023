@@ -8,6 +8,7 @@ public class Charizard extends Pokemon{
         this.name = "리자몽";
         this.flyable = f; // Association, has-a (Aggregation)
         this.attackRate = 84;
+        this.defenceRate = 78;
     }
 
     public Charizard(int level, int hp, String name) {

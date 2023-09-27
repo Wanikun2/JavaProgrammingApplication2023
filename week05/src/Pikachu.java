@@ -9,6 +9,7 @@ public class Pikachu extends Pokemon{
         //this.flyable = new NoFly();  // Association, Has-a (Composition)
         this.flyable = f;
         this.attackRate = 55;
+        this.defenceRate = 40;
     }
 
     @Override

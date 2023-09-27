@@ -10,6 +10,7 @@ public class Squirtle extends Pokemon{
         this.name = "꼬부기";
         this.flyable = f; // Association, has-a (Aggregation)
         this.attackRate = 48;
+        this.defenceRate = 65;
     }
 
     @Override

@@ -7,6 +7,7 @@ public abstract class Pokemon {
     private int hp;
     protected String name;
     protected int attackRate;
+    protected int defenceRate;
 
 
     private static int pokemonCount = 0;  // 클래스(정적) 변수
@@ -85,10 +86,12 @@ public abstract class Pokemon {
     }
 
     public void attack(Pokemon targerPokemon, String skill){
-        System.out.println(this.name +"이(가) " + targerPokemon.name + "에게 "+ skill +"공격 시전!");
-        targerPokemon.hp = targerPokemon.hp - this.attackRate;
-        System.out.println(targerPokemon.name + " 의 체력은 " + targerPokemon.hp + "입니다.");
-
-
+        System.out.println(this.name +"이(가) " + targerPokemon.name + "에게 "+ skill +" 공격 시전!");
+        targerPokemon.hp = targerPokemon.hp - (this.attackRate - targerPokemon.defenceRate);
+        if(targerPokemon.hp <= 0){
+            System.out.println(targerPokemon.name + "은(는) 사망" );
+        }else{
+            System.out.println(targerPokemon.name + "의 체력은 " + targerPokemon.hp + "입니다.");
+        }
     }
 }
