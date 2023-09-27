@@ -9,8 +9,10 @@ public abstract class Pokemon {
     protected int attackRate;
     protected int defenceRate;
 
-
+    protected  String[] skills; //3가지 skill 추가 예정
+    protected  int[] specialAttackRate;
     private static int pokemonCount = 0;  // 클래스(정적) 변수
+
 
     Flyable flyable;  // 연관 관계
 
@@ -87,7 +89,10 @@ public abstract class Pokemon {
 
     public void attack(Pokemon targerPokemon, String skill){
         System.out.println(this.name +"이(가) " + targerPokemon.name + "에게 "+ skill +" 공격 시전!");
-        targerPokemon.hp = targerPokemon.hp - (this.attackRate - targerPokemon.defenceRate);
+        int temporary_AttackRate = this.attackRate - targerPokemon.defenceRate;
+        if(temporary_AttackRate < 0)
+            temporary_AttackRate = 0;
+        targerPokemon.hp = targerPokemon.hp - temporary_AttackRate;
         if(targerPokemon.hp <= 0){
             System.out.println(targerPokemon.name + "은(는) 사망" );
         }else{

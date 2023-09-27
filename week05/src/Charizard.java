@@ -7,8 +7,12 @@ public class Charizard extends Pokemon{
         this.setHp(78);
         this.name = "리자몽";
         this.flyable = f; // Association, has-a (Aggregation)
-        this.attackRate = 84;
+        //this.attackRate = 84; //2단계 진화 포켓몬스터의 경우 최대 공격력과 최소 공격력의 차이를 10으로 두고 랜덤 추출
+        this.attackRate = (int)(Math.random() * 11) + 74; // 74 ~ 84
         this.defenceRate = 78;
+        this.skills = new String[]{"화염방사", "용의숨결", "할퀴기"};
+        this.specialAttackRate = new int[]{90, 60, 40};
+
     }
 
     public Charizard(int level, int hp, String name) {

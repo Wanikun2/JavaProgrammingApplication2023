@@ -8,7 +8,8 @@ public class Pikachu extends Pokemon{
         this.name = "피카츄";
         //this.flyable = new NoFly();  // Association, Has-a (Composition)
         this.flyable = f;
-        this.attackRate = 55;
+        //this.attackRate = 55;
+        this.attackRate = (int)(Math.random() * 6) + 50; // 50~55
         this.defenceRate = 40;
     }
 
