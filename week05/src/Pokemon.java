@@ -87,9 +87,9 @@ public abstract class Pokemon {
         System.out.println("================");
     }
 
-    public void attack(Pokemon targerPokemon, String skill){
-        System.out.println(this.name +"이(가) " + targerPokemon.name + "에게 "+ skill +" 공격 시전!");
-        int temporary_AttackRate = this.attackRate - targerPokemon.defenceRate;
+    public void attack(Pokemon targerPokemon, int skillNumber){
+        System.out.println(this.name +"이(가) " + targerPokemon.name + "에게 "+ this.skills[skillNumber-1] +" 공격 시전!");
+        int temporary_AttackRate = (this.attackRate + this.specialAttackRate[skillNumber]-1) - targerPokemon.defenceRate;
         if(temporary_AttackRate < 0)
             temporary_AttackRate = 0;
         targerPokemon.hp = targerPokemon.hp - temporary_AttackRate;
