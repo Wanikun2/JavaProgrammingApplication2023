@@ -1,6 +1,7 @@
 package Pokemonster;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Charizard extends Pokemon{
     public Charizard(Flyable f) {
@@ -19,15 +20,18 @@ public class Charizard extends Pokemon{
         // 1. Pokemon에 ArrayList 선언(만들기) 2. 각각 포켓몬에 skill, specialAttackRate(Pokemon에 만든) 거에 ArrayList 만들고 안에 들어갈 데이터 add로 넣기
         // 3. Attack, PokemonGame 에 배열들 다 .get()로 꺼내기
 
-        this.skills = new ArrayList<>();
-        this.skills.add("화염방사");
-        this.skills.add("용의숨결");
-        this.skills.add("할퀴기");
+//        this.skills = new ArrayList<>();
+//        this.skills.add("화염방사");
+//        this.skills.add("용의숨결");
+//        this.skills.add("할퀴기");
+//
+//        this.specialAttackRate = new ArrayList<>();
+//        this.specialAttackRate.add(90);
+//        this.specialAttackRate.add(60);
+//        this.specialAttackRate.add(40);
 
-        this.specialAttackRate = new ArrayList<>();
-        this.specialAttackRate.add(90);
-        this.specialAttackRate.add(60);
-        this.specialAttackRate.add(40);
+        this.skills = new ArrayList<>(Arrays.asList("화염방사", "용의숨결", "할퀴기"));
+        this.specialAttackRate = new ArrayList<>(Arrays.asList(90, 60, 40));
     }
 
     public Charizard(int level, int hp, String name) {
