@@ -1,5 +1,6 @@
 package Pokemonster;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 //generic
 // 1. Pokemon에 ArrayList 선언(만들기) 2. 각각 포켓몬에 skill, specialAttackRate(Pokemon에 만든) 거에 ArrayList 만들고 안에 들어갈 데이터 add로 넣기
@@ -31,6 +32,8 @@ public class PokemonGame {
 
         // 플레이어 포켓몬스터 선택
         // Pokemonster.Pokemon player = new Pokemonster.Pokemon();  // 추상클래스의 객체는 생성 불가
+
+    try {
         Pokemon player = null;  // 추상클래스의 변수 선언은 가능 (upcasting 용)
         Scanner scanner = new Scanner(System.in);
         System.out.print("포켓몬을 고르세요.\n1) 피카츄   2) 꼬부기   3) 리자몽 : ");
@@ -67,5 +70,14 @@ public class PokemonGame {
                 break;
             }
         }
+    }catch (InputMismatchException err){
+        System.out.println("입력 값은 숫자로 입력하셔야 합니다.");
+    }catch (Exception err){
+        System.out.println("예외가 발생했습니다.");
+        System.out.println("예외 내용 : " + err.getMessage());
+    }finally {
+        System.out.println("프로그램 종료");
+    }
+
     }
 }

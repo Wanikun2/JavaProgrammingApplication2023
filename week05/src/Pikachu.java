@@ -11,6 +11,8 @@ public class Pikachu extends Pokemon{
         //this.attackRate = 55;
         this.attackRate = (int)(Math.random() * 6) + 50; // 50~55
         this.defenceRate = 40;
+        this.skills = new String[]{"전광석화", "백만볼트", "몸통박치기"};
+        this.specialAttackRate = new int[]{80, 50, 40};
     }
 
     @Override

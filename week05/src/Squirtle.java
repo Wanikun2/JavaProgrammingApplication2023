@@ -12,6 +12,9 @@ public class Squirtle extends Pokemon{
         //this.attackRate = 48;
         this.attackRate = (int)(Math.random() * 4) + 45; // 45~ 48
         this.defenceRate = 65;
+        this.skills = new String[]{"하이드로펌프", "물대포", "깨물기"};
+        this.specialAttackRate = new int[]{70, 60, 20};
+
     }
 
     @Override
