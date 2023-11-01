@@ -1,7 +1,8 @@
 package Pokemonster;
 
+import fly.Flyable;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Squirtle extends Pokemon{
     public Squirtle(Flyable f) {
@@ -15,21 +16,17 @@ public class Squirtle extends Pokemon{
         this.setHp(44);
         this.name = "꼬부기";
         this.flyable = f; // Association, has-a (Aggregation)
-        //this.skills = new String[]{"물대포", "고속스핀", "물의파동"};
-        //this.specialAttackRate = new int[]{40, 50, 60};
+//        this.skills = new String[]{"물대포", "고속스핀", "물의파동"};
+//        this.specialAttackRate = new int[]{40, 50, 60};
+        this.skills = new ArrayList<>();
+        this.skills.add("물대포");
+        this.skills.add("고속스핀");
+        this.skills.add("물의파동");
 
-//        this.skills = new ArrayList<>();
-//        this.skills.add("물대포");
-//        this.skills.add("고속스핀");
-//        this.skills.add("물의파동");
-//
-//        this.specialAttackRate = new ArrayList<>();
-//        this.specialAttackRate.add(40);
-//        this.specialAttackRate.add(50);
-//        this.specialAttackRate.add(60);
-
-        this.skills = new ArrayList<>(Arrays.asList("물대포", "고속스핀", "물의파동"));
-        this.specialAttackRate = new ArrayList<>(Arrays.asList(40, 50, 60));
+        this.specialAttackRate = new ArrayList<>();
+        this.specialAttackRate.add(40);
+        this.specialAttackRate.add(50);
+        this.specialAttackRate.add(60);
     }
 
     @Override

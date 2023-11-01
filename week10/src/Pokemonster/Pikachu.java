@@ -1,5 +1,7 @@
 package Pokemonster;
 
+import fly.Flyable;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -12,10 +14,10 @@ public class Pikachu extends Pokemon{
         this.defenceRate = 40;
         this.setHp(35);
         this.name = "피카츄";
-        //this.flyable = new Pokemonster.NoFly();  // Association, Has-a (Composition)
-        this.flyable = f; //포켓몬 flyable를 이용하는거 제트팩을 이용하는거랑 같음
-        // composition이면 this.flyable = new NoFly() 피카츄 객체 안에서 만들었으니
-        // 피카츄가 죽으면 같이 사라짐
+        //this.flyable = new fly.NoFly();  // Association, Has-a (Composition)
+        this.flyable = f;  // composition 이면 this.flyable = new NoFly();
+//        this.skills = new String[]{"10만볼트", "스파크", "볼부비부비"};
+//        this.specialAttackRate = new int[]{90, 65, 20};
 
 //        this.skills = new ArrayList<>();
 //        this.skills.add("10만볼트");

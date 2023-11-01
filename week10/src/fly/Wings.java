@@ -1,5 +1,7 @@
 package fly;
 
+import fly.Flyable;
+
 public class Wings implements Flyable {
 //    @Override
 //    public void fly() {
