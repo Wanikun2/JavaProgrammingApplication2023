@@ -19,7 +19,6 @@ public abstract class Pokemon {
     protected List<Integer> specialAttackRate;
     private static int pokemonCount = 0;  // 클래스(정적) 변수
 
-
     Flyable flyable;  // 연관 관계
 
     public void setFlyable(Flyable flyable) {  // upcast
